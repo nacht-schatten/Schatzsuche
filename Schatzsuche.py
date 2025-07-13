@@ -164,7 +164,7 @@ def zeige_spielfeld(versuche, wasser_marker, treffer_marker):
                 symbol = "🔍"
             else:
                 farbe = "#ADD8E6"
-                symbol = "🔒"
+                symbol = "💡"
             rahmen = "2px solid red" if aktive_felder and pos in aktive_felder else "1px solid #ccc"
             grid_html += f"<td style='width:24px;height:24px;text-align:center;background-color:{farbe};border:{rahmen}'>{symbol}</td>"
 
