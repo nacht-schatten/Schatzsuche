@@ -518,7 +518,7 @@ if st.session_state.phase == "spiel":
         
         
     if "treffer_feedback" in st.session_state:
-        st.success(st.session_state.treffer_feedback)
+        st.toast(st.session_state.treffer_feedback)
 
 
         # Phase-Wechsel prüfen
@@ -571,8 +571,11 @@ if st.session_state.phase == "raten" or rekonstruieren:
                 st.info("💡 **Tipp:** Füge einen weiteren Anteil hinzu, um eine Entscheidung zu ermöglichen.")
             
             elif konsistent:
-                ################## hier!
-                st.success(f"✅ Geheimnis erfolgreich rekonstruiert: s = {s_guess}")
+                if s_guess == st.session_state.geheimes_s:
+                    st.success(f"✅ Geheimnis richtig rekonstruiert: s = {s_guess}")
+                    st.balloons()
+                else:
+                    st.error("Upps! Das ist das falsche Geheimnis!")
             else:
                 st.warning(f"⚠️ Nicht eindeutig: häufigstes s = {s_guess}")
                 st.write("Ergebnisse der Häufigkeitsanalyse:")
