@@ -60,17 +60,17 @@ else:
 
 
 
-if level == "Singleplayer Mini (6x6)"
+if level == "Singleplayer Mini (6x6)":
     f = 6
     p = 7
     n = 6
     MAX_ZUEGE = 24
-elif level == "Gamemaster Mini (6x6)"
+elif level == "Gamemaster Mini (6x6)":
     f = 6
     p = 7
     n = 6
     MAX_ZUEGE = 24
-elif level == "Singleplayer Maxi (10x10)"
+elif level == "Singleplayer Maxi (10x10)":
     f = 10
     p = 11
     n = 10
