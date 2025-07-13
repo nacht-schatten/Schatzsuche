@@ -544,7 +544,7 @@ if st.session_state.phase == "raten" or rekonstruieren:
     st.header("🖊️ Rekonstruiere Geheimnis:")
     
     punkte_input = st.text_input("📥 Wertepunkte (x,y;x,y;...)", value="1,5;2,3;3,8")
-    p = 11
+    
    
     try:
         punkte = [tuple(map(int, pair.split(","))) for pair in punkte_input.split(";") if pair.strip()]
