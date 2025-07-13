@@ -91,8 +91,7 @@ if level.startswith("Singleplayer"):
     if "geheimes_s" not in st.session_state:
         st.session_state.geheimes_s = random.randint(1, p - 1)
 else:
-   
-    st.session_state.geheimes_s = s
+     st.session_state.geheimes_s = s
 
 
 
