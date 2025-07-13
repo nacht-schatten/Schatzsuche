@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import random
 from itertools import combinations
-
+import hashlib
 
 st.set_page_config(
     page_title="Schatzsuche für Gangster",
@@ -16,7 +16,7 @@ st.set_page_config(
 st.title("Schatzsuche für Gangster")
 
 
-
+ECHTES_S_HASH = "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
 
 st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
@@ -40,15 +40,57 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+if "level_fixiert" not in st.session_state or not st.session_state.level_fixiert:
+    level = st.selectbox("🧭 Modus wählen", ["Single Player Mini (6x6)", "Gamemaster Mini (6x6)", "Single Player Maxi (10x10)", "Gamemaster (10x10)"])
+    if st.button("🚀 Spiel starten"):
+        st.session_state.level = level
+        st.session_state.level_fixiert = True
+        st.rerun()
+else:
+    st.markdown(f"🧭 Gewählter Modus: **{st.session_state.level}**")
+
+
+if "level" in st.session_state:
+    level = st.session_state.level
+    
+else:
+    st.warning("⚠️ Bitte zuerst einen Modus auswählen und das Spiel starten.")
+    st.stop()  # verhindert weitere Ausführung bis Level gewählt wurde
 
 
 
-MAX_ZUEGE = 40
-f =10 
-p = 11  # Primzahl
-k = 7   # Mindestanzahl für Rekonstruktion
-n = 10  # Anzahl der Spalten = Anzahl der Anteile
-s = 8 #Zahl zwischen 0 und 10 einschließlich
+
+if level == "Singleplayer Mini (6x6)"
+    f = 6
+    p = 7
+    n = 6
+    MAX_ZUEGE = 24
+elif level == "Gamemaster Mini (6x6)"
+    f = 6
+    p = 7
+    n = 6
+    MAX_ZUEGE = 24
+elif level == "Singleplayer Maxi (10x10)"
+    f = 10
+    p = 11
+    n = 10
+    MAX_ZUEGE = 40
+else 
+    f=10
+    p=11
+    n=10
+    MAX_ZUEGE = 40
+  
+
+
+if modus.startswith("Singleplayer"):
+    if "geheimes_s" not in st.session_state:
+        st.session_state.geheimes_s = random.randint(1, p - 1)
+else:
+   
+    st.session_state.geheimes_s = ECHTES_S_HASH
+
+
 
 
 
