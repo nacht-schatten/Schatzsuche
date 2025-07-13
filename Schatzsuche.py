@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import random
 from itertools import combinations
-import hashlib
+
 
 st.set_page_config(
     page_title="Schatzsuche für Gangster",
@@ -28,7 +28,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-s_hash = hashlib.sha256(str(2**3-3).encode()).hexdigest()
+s=5
 st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <style>
@@ -92,7 +92,7 @@ if level.startswith("Singleplayer"):
         st.session_state.geheimes_s = random.randint(1, p - 1)
 else:
    
-    st.session_state.geheimes_s = s_hash
+    st.session_state.geheimes_s = s
 
 
 
