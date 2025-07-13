@@ -41,7 +41,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if "level_fixiert" not in st.session_state or not st.session_state.level_fixiert:
-    level = st.selectbox("🧭 Modus wählen", ["Single Player Mini (6x6)", "Gamemaster Mini (6x6)", "Single Player Maxi (10x10)", "Gamemaster (10x10)"])
+    level = st.selectbox("🧭 Modus wählen", ["Singleplayer Mini (6x6)", "Gamemaster Mini (6x6)", "Singleplayer Maxi (10x10)", "Gamemaster Maxi (10x10)"])
     if st.button("🚀 Spiel starten"):
         st.session_state.level = level
         st.session_state.level_fixiert = True
@@ -92,7 +92,7 @@ else:
 
 
 
-
+s = st.session_state.geheimes_s
 
 def generiere_funktion(s, k, p):
     
