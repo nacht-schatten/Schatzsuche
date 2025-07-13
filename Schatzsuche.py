@@ -75,7 +75,7 @@ elif level == "Singleplayer Maxi (10x10)":
     p = 11
     n = 10
     MAX_ZUEGE = 40
-else 
+else: 
     f=10
     p=11
     n=10
