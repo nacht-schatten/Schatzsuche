@@ -38,6 +38,12 @@ st.markdown("""
         line-height: 1.2;
     }
     </style>
+    <div class="schreibmaschine">
+Finde alle Hinweise und entdecke das Geheimnis! Nur... welchen Modus sollst du wählen?
+
+Gamemaster-Modus: Du musst ein bestimmtes Geheimnis für eine Aktion finden.
+Singleplayer-Modus: Du möchtest dich alleine am Rätseln probieren. Für jedes Spiel wird ein neues Geheimnis erstellt!
+</div>
 """, unsafe_allow_html=True)
 
 if "level_fixiert" not in st.session_state or not st.session_state.level_fixiert:
