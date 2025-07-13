@@ -34,7 +34,7 @@ st.markdown("""
     <style>
     .schreibmaschine {
         font-family: 'Courier Prime', monospace;
-        font-size: 17px;
+        font-size: 20px;
         line-height: 1.2;
     }
     </style>
