@@ -64,21 +64,25 @@ if level == "Singleplayer Mini (6x6)":
     f = 6
     p = 7
     n = 6
+    k = 4
     MAX_ZUEGE = 24
 elif level == "Gamemaster Mini (6x6)":
     f = 6
     p = 7
     n = 6
+    k=4
     MAX_ZUEGE = 24
 elif level == "Singleplayer Maxi (10x10)":
     f = 10
     p = 11
     n = 10
+    k=7
     MAX_ZUEGE = 40
 else: 
     f=10
     p=11
     n=10
+    k=7
     MAX_ZUEGE = 40
   
 
