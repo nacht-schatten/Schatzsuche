@@ -27,9 +27,10 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-
 s=2**3-3
-st.markdown("""
+
+if "level_fixiert" not in st.session_state or not st.session_state.level_fixiert:
+    st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <style>
     .schreibmaschine {
@@ -47,8 +48,7 @@ Finde alle Hinweise und entdecke das Geheimnis! Nur... welchen Modus sollst du w
 **Singleplayer-Modus:** Du möchtest dich alleine am Rätseln probieren. Für jedes Spiel wird ein neues Geheimnis erstellt!
 </div>
 """, unsafe_allow_html=True)
-
-if "level_fixiert" not in st.session_state or not st.session_state.level_fixiert:
+    
     level = st.selectbox("🧭 Modus wählen", ["Singleplayer Mini (6x6)", "Gamemaster Mini (6x6)", "Singleplayer Maxi (10x10)", "Gamemaster Maxi (10x10)"])
     if st.button("🚀 Spiel starten"):
         st.session_state.level = level
