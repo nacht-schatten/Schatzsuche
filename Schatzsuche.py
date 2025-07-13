@@ -28,6 +28,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+import hashlib
+s_hash = hashlib.sha256(str(2**3-3).encode()).hexdigest()
 st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <style>
@@ -91,7 +94,7 @@ if level.startswith("Singleplayer"):
         st.session_state.geheimes_s = random.randint(1, p - 1)
 else:
    
-    st.session_state.geheimes_s = 5
+    st.session_state.geheimes_s = s_hash
 
 
 
