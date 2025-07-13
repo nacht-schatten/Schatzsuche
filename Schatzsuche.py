@@ -16,7 +16,6 @@ st.set_page_config(
 st.title("Schatzsuche für Gangster")
 
 
-ECHTES_S_HASH = "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
 
 st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
@@ -92,7 +91,7 @@ if level.startswith("Singleplayer"):
         st.session_state.geheimes_s = random.randint(1, p - 1)
 else:
    
-    st.session_state.geheimes_s = ECHTES_S_HASH
+    st.session_state.geheimes_s = 5
 
 
 
