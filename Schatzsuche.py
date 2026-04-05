@@ -535,7 +535,7 @@ if st.session_state.phase == "spiel":
 else:
     st.warning("🔒 Die Züge sind aufgebraucht – du kannst jetzt nicht mehr suchen.")
         
-st.session_state.radius = neuer_radius
+
 
 rekonstruieren = st.checkbox("🧩 Geheimnis jetzt rekonstruieren")
 
