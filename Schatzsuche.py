@@ -103,7 +103,7 @@ else:
 
 
 
-s = st.session_state.geheimes_s
+s = 4
 
 def generiere_funktion(s, k, p):
     
